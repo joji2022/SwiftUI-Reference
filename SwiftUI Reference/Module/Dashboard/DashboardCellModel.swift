@@ -8,8 +8,14 @@
 import Foundation
 import SwiftUICore
 
-struct DashboardCellModel<T: View>: Identifiable {
+enum DestinationType {
+    case getStartedWithApps
+    case keepGoingWithApps
+}
+
+struct DashboardCellModel: Identifiable {
     var id = UUID()
     var label: String
-    var destination: T
+    var destinationType: DestinationType
+    var description: String
 }

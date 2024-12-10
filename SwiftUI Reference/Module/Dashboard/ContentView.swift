@@ -13,12 +13,15 @@ struct ContentView: View {
     
     var body: some View {
         NavigationStack {
-            List {
-                ForEach(viewModel.dashboardItems) { item in
-                    DashboardCellView(label: item.label, destinationView: item.destination)
+            VStack {
+                List {
+                    ForEach(viewModel.dashboardItems) { item in
+                        DashboardCellView(dashboardItem: item)
+                    }
                 }
+                .navigationTitle(Constants.SWIFT_UI_REFERENCES)
+                .contentMargins(.top, 15)
             }
-            .navigationTitle(Constants.SWIFT_UI_REFERENCES)
         }
         
     }

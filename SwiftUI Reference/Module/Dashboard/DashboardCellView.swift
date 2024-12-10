@@ -7,14 +7,19 @@
 
 import SwiftUI
 
-struct DashboardCellView<Destination: View>: View {
+struct DashboardCellView: View {
     
-    var label: String
-    var destinationView: Destination
+    let dashboardItem: DashboardCellModel
+    var destinationType: DestinationType {
+        dashboardItem.destinationType
+    }
+    var label: String {
+        dashboardItem.label
+    }
     
     var body: some View {
         NavigationLink {
-            destinationView
+            AppDescriptionView(dashboardItem: dashboardItem)
                 .navigationTitle(label)
                 .navigationBarTitleDisplayMode(.inline)
         } label: {
@@ -25,5 +30,5 @@ struct DashboardCellView<Destination: View>: View {
 }
 
 #Preview {
-    DashboardCellView(label: Constants.SWIFT_UI_REFERENCES, destinationView: GetStartedWithAppsView())
+    DashboardCellView(dashboardItem: DashboardCellModel(label: Constants.GET_STARTED_WITH_APPS, destinationType: .getStartedWithApps, description: AppDescriptions.GET_STARTED_WITH_APPS))
 }
