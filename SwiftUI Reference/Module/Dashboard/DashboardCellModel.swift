@@ -11,6 +11,8 @@ import SwiftUICore
 enum DestinationType {
     case getStartedWithApps
     case keepGoingWithApps
+    case binding
+    case navigation
 }
 
 struct DashboardCellModel: Identifiable {

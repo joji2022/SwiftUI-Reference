@@ -33,7 +33,7 @@ struct KeepGoingView: View {
                     .font(.system(size: 100))
                     .symbolRenderingMode(.palette)
                     .foregroundStyle(isChargerConnected ? .green : .white, .white)
-                    .frame(width: .infinity, height: 100)
+                    .frame(maxWidth: .infinity, maxHeight: 100)
                 HStack {
                     Image(systemName: "apps.iphone")
                         .font(.system(size: 100))
@@ -61,19 +61,7 @@ struct KeepGoingView: View {
                         .lineLimit(1)
                         .frame(minWidth: 40, maxWidth: 60)
                 }
-                NavigationLink {
-                    LearnNavigationSplitView()
-                        .navigationTitle(NavigationTitles.NAVIGATION_SPLIT_VIEW)
-                } label: {
-                    Text("Next")
-                        .font(.system(size: 18))
-                        .foregroundStyle(.white)
-                        .padding(.horizontal, 20)
-                        .padding(.vertical, 8)
-                        .background(Rectangle().foregroundColor(Color.blue)
-                            .clipShape(RoundedRectangle(cornerRadius: 10))
-                        )
-                }
+                
 
             }
             .padding(.horizontal, 20)

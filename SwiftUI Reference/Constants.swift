@@ -14,12 +14,13 @@ struct Constants {
     static let ABOUT_ME_APP = "About Me App"
     static let ORGANISING_WITH_GRIDS = "Organising with Grids"
     static let EDITING_GRIDS = "Editing Grids"
+    static let EMPTY_STRING = ""
 }
 
 struct NavigationTitles {
     static let NAVIGATION_SPLIT_VIEW = "Navigation Split View"
+    static let BINDING = "Binding"
 }
-
 
 struct AppDescriptions {
     static let GET_STARTED_WITH_APPS = """

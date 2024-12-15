@@ -39,8 +39,10 @@ struct AppDescriptionView: View {
                     GetStartedWithAppsView()
                         .navigationTitle(dashboardItem.label)
                 case .keepGoingWithApps:
-                    KeepGoingView()
+                    KeepGoingDashboard()
                         .navigationTitle(dashboardItem.label)
+                default:
+                    EmptyView()
                 }
             } label: {
                 Text("Go to App")
