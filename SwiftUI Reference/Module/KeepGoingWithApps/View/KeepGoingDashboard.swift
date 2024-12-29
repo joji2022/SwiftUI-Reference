@@ -20,7 +20,7 @@ struct KeepGoingDashboard: View {
                     case .binding:
                         ZStack {
                             NavigationLink {
-                                KeepGoingView()
+                                BindingView()
                                     .navigationTitle(item.label)
                             } label: {
                                 EmptyView()
@@ -43,6 +43,20 @@ struct KeepGoingDashboard: View {
                             }
                             .foregroundStyle(.black)
                             
+                        }
+                    case .keepGoingWithApps:
+                        ZStack {
+                            NavigationLink {
+                                KeepGoingView()
+                                    .navigationTitle(item.label)
+                            } label: {
+                                EmptyView()
+                            }
+                            HStack {
+                                Text(item.label)
+                                Spacer()
+                                Image(systemName: "chevron.forward")
+                            }
                         }
 
                     default:

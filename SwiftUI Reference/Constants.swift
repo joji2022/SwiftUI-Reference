@@ -20,6 +20,7 @@ struct Constants {
 struct NavigationTitles {
     static let NAVIGATION_SPLIT_VIEW = "Navigation Split View"
     static let BINDING = "Binding"
+    static let KEEP_GOING_WITH_APPS = "Keep Going with Apps"
 }
 
 struct AppDescriptions {
