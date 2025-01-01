@@ -15,12 +15,16 @@ struct Constants {
     static let ORGANISING_WITH_GRIDS = "Organising with Grids"
     static let EDITING_GRIDS = "Editing Grids"
     static let EMPTY_STRING = ""
+    static let ANIMATE = "Animate"
+    static let ANIMATE_TASK = "Animate Task"
+    static let ANIMATING_TASK = "Animating Task"
 }
 
 struct NavigationTitles {
     static let NAVIGATION_SPLIT_VIEW = "Navigation Split View"
     static let BINDING = "Binding"
     static let KEEP_GOING_WITH_APPS = "Keep Going with Apps"
+    static let KEEP_GOING_VIEW = "Keep Going View"
 }
 
 struct AppDescriptions {

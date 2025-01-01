@@ -11,6 +11,7 @@ struct KeepGoingDashboard: View {
     
     @EnvironmentObject var appState: AppState
     let viewModel = KeepGoingViewModel()
+    @StateObject var data = KeepGoingViewModel()
     
     var body: some View {
         VStack {
@@ -49,6 +50,7 @@ struct KeepGoingDashboard: View {
                             NavigationLink {
                                 KeepGoingView()
                                     .navigationTitle(item.label)
+                                    .environmentObject(data)
                             } label: {
                                 EmptyView()
                             }

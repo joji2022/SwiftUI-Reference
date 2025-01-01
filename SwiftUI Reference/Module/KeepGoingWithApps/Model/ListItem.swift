@@ -27,10 +27,12 @@ struct ListItem: Identifiable {
         Content(title: "4: Content", description: "4: Description"),
         Content(title: "5: Content", description: "5: Description")
     ]
+    
+    struct Content: Identifiable, Hashable {
+        let id = UUID()
+        let title: String
+        let description: String
+    }
 }
 
-struct Content: Identifiable, Hashable {
-    let id = UUID()
-    let title: String
-    let description: String
-}
+

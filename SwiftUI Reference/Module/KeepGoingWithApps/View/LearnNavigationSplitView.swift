@@ -12,7 +12,7 @@ struct LearnNavigationSplitView: View {
     let viewModel = KeepGoingViewModel()
     let listItems: [ListItem] = ListItem.listItems
     @State var listItemId: ListItem.ID?
-    @State var contentId: Content.ID?
+    @State var contentId: ListItem.Content.ID?
     @EnvironmentObject var appState: AppState
     
     var body: some View {
